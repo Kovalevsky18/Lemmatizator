@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Book" representedClassName="Book" syncable="YES">
+        <attribute name="maxWord" optional="YES" attributeType="String"/>
+        <attribute name="medianWord" optional="YES" attributeType="String"/>
+        <attribute name="minWord" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="word" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Word" inverseName="book" inverseEntity="Word"/>
+    </entity>
+    <entity name="Word" representedClassName="Word" syncable="YES">
+        <attribute name="definition" optional="YES" attributeType="String"/>
+        <attribute name="wordName" optional="YES" attributeType="String"/>
+        <relationship name="book" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Book" inverseName="word" inverseEntity="Book"/>
+    </entity>
+    <elements>
+        <element name="Book" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Word" positionX="-54" positionY="18" width="128" height="88"/>
+    </elements>
+</model>
